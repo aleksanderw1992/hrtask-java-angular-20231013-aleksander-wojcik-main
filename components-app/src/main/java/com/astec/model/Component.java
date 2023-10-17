@@ -23,12 +23,15 @@ public class Component {
     @Size(max = 3000)
     private String description;
 
+    // Default constructor for JPA
     public Component() {}
 
-    public Component(byte[] logo, String name, String description) {
-        this.logo = logo;
+    // Constructor for testing
+    public Component(Long id, String name, String description, byte[] logo) {
+        this.id = id;
         this.name = name;
         this.description = description;
+        this.logo = logo;
     }
 
     public Long getId() {

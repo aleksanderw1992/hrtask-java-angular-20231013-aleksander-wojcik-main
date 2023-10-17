@@ -13,6 +13,13 @@ public class ComponentService {
     @PersistenceContext(unitName = "astecPU")
     private EntityManager em;
 
+    // Default constructor
+    public ComponentService() {}
+
+    // Constructor for testing purposes
+    ComponentService(EntityManager em) {
+        this.em = em;
+    }
     public Component save(Component component) {
         em.persist(component);
         return component;

@@ -31,8 +31,9 @@ public class ComponentResource {
     }
 
     @GET
-    public List<Component> listComponents() {
-        return service.findAll();
+    public Response listComponents() {
+        List<Component> components = service.findAll();
+        return Response.ok(components).build();
     }
 
     @GET
