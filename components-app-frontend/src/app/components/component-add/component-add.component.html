@@ -1,0 +1,18 @@
+<form (ngSubmit)="addComponent()">
+  <div>
+    <label for="logo">Logo URL:</label>
+    <input type="text" id="logo" [(ngModel)]="newComponent.logo" name="logo" required>
+  </div>
+
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" [(ngModel)]="newComponent.name" name="name" maxlength="100" required>
+  </div>
+
+  <div>
+    <label for="description">Description:</label>
+    <textarea id="description" [(ngModel)]="newComponent.description" name="description" maxlength="3000"></textarea>
+  </div>
+
+  <button type="submit">Add Component</button>
+</form>
