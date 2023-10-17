@@ -3,13 +3,13 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>com.astec</groupId>
-        <artifactId>components-app</artifactId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
-    <artifactId>components-app-backend</artifactId>
-    <packaging>war</packaging>
+  <parent>
+    <groupId>com.astec</groupId>
+    <artifactId>components-app</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>components-app-backend</artifactId>
+  <packaging>war</packaging>
 
   <properties>
     <maven.compiler.source>11</maven.compiler.source>
@@ -73,6 +73,17 @@
       <version>2.22.2</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.glassfish.jersey.containers</groupId>
+      <artifactId>jersey-container-servlet</artifactId>
+      <version>2.22.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.glassfish.jersey.inject</groupId>
+      <artifactId>jersey-hk2</artifactId>
+      <version>2.26</version>
+    </dependency>
 
 
   </dependencies>
@@ -80,18 +91,18 @@
   <build>
     <finalName>components-app</finalName>
     <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>2.22.2</version>
-            <dependencies>
-                <dependency>
-                    <groupId>org.junit.jupiter</groupId>
-                    <artifactId>junit-jupiter-engine</artifactId>
-                    <version>5.8.1</version>
-                </dependency>
-            </dependencies>
-        </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.22.2</version>
+        <dependencies>
+          <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.8.1</version>
+          </dependency>
+        </dependencies>
+      </plugin>
     </plugins>
 
   </build>

@@ -58,3 +58,11 @@ Content-Type: text/html;charset=ISO-8859-1
 Transfer-Encoding: chunked
 Date: Tue, 17 Oct 2023 22:10:10 GMT
 ```
+
+Also:
+```shell
+curl -X GET http://localhost:8080/components-app/api/components
+
+curl -X POST -H "Content-Type: application/json" -d '{"name": "New Component", "description": "Description of the component"}' http://localhost:8080/components-app/api/components
+
+```
