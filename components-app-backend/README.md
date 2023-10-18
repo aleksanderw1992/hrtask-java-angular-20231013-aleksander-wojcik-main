@@ -1,6 +1,6 @@
 # Components App Backend Deployment Guide
 
-This README provides instructions for deploying and running the `components-app.war` using Apache Tomcat.
+This README provides instructions for deploying and running the `components-app.war` using WildFly.
 
 ## Prerequisites
 
@@ -9,34 +9,33 @@ This README provides instructions for deploying and running the `components-app.
     java -version
     ```
 
-2. **Apache Tomcat**: Download and extract the latest version of Apache Tomcat (compatible with Java 11 and Jakarta EE 8, example Tomcat 9) from the [official Tomcat website](https://tomcat.apache.org/download-90.cgi).
-
+2. **WildFly**: Download and extract the appropriate version of WildFly (compatible with Java 11 and Jakarta EE 8, e.g., WildFly 19 or later) from the [official WildFly website](https://wildfly.org/downloads/).
+Note:
+We don’t plan to support Jakarta EE 8 in standard WildFly. The WildFly 26.1 releases will be the last that support EE 8.
 ## Deployment Steps
 
-1. **Deploy the `.war` file to Tomcat**:
+1. **Deploy the `.war` file to WildFly**:
 
-   - Place the `components-app.war` into the `webapps` directory of your Tomcat installation.
+   - Place the `components-app.war` into the `standalone/deployments/` directory of your WildFly installation.
    
-2. **Start Tomcat**:
+2. **Start WildFly**:
 
-   Navigate to the `bin` directory of your Tomcat installation. Depending on your OS, execute the appropriate script:
+   Navigate to the `bin` directory of your WildFly installation. Depending on your OS, execute the appropriate script:
 
    - For Linux/macOS:
    
      ```bash
-     chmod +x catalina.sh
-     or
-     ./catalina.sh start
-     sh startup.sh
+     chmod +x standalone.sh
+     ./standalone.sh
      ```
 
    - For Windows:
    
      ```bash
-     startup.bat
+     standalone.bat
      ```
 
-   This will launch Tomcat and it will automatically deploy the `components-app.war`.
+   This will start WildFly and it will automatically deploy the `components-app.war`.
 
 3. **Verify the Application**:
 
