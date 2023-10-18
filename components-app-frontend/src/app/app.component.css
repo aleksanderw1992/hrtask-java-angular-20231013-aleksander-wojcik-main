@@ -1,0 +1,16 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+nav a {
+  text-decoration: none;
+  margin: 0 10px;
+  color: #007BFF;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
